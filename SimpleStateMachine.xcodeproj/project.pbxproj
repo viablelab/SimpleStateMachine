@@ -8,14 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		E3319FA82326E52500C962F1 /* SimpleStateMachine.h in Headers */ = {isa = PBXBuildFile; fileRef = E3319FA62326E52500C962F1 /* SimpleStateMachine.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E3319FAF2326E53C00C962F1 /* SimpleStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3319FAE2326E53C00C962F1 /* SimpleStateMachine.swift */; };
+		E35042C82326EC91005CCD87 /* StateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3319FAE2326E53C00C962F1 /* StateMachine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E3319FA32326E52500C962F1 /* SimpleStateMachine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SimpleStateMachine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3319FA62326E52500C962F1 /* SimpleStateMachine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleStateMachine.h; sourceTree = "<group>"; };
 		E3319FA72326E52500C962F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E3319FAE2326E53C00C962F1 /* SimpleStateMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleStateMachine.swift; sourceTree = "<group>"; };
+		E3319FAE2326E53C00C962F1 /* StateMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateMachine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +50,7 @@
 			children = (
 				E3319FA62326E52500C962F1 /* SimpleStateMachine.h */,
 				E3319FA72326E52500C962F1 /* Info.plist */,
-				E3319FAE2326E53C00C962F1 /* SimpleStateMachine.swift */,
+				E3319FAE2326E53C00C962F1 /* StateMachine.swift */,
 			);
 			path = SimpleStateMachine;
 			sourceTree = "<group>";
@@ -134,7 +134,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3319FAF2326E53C00C962F1 /* SimpleStateMachine.swift in Sources */,
+				E35042C82326EC91005CCD87 /* StateMachine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
