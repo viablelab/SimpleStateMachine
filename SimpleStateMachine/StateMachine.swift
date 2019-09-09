@@ -8,24 +8,24 @@
 
 import Foundation
 
-struct StateMachine<State: Hashable, Action: Hashable> {
-  typealias StateChart = [State: [Action: State]]
-  typealias OnTransitionClosure = (_ newState: State, _ lastState: State) -> Void
+public struct StateMachine<State: Hashable, Action: Hashable> {
+  public typealias StateChart = [State: [Action: State]]
+  public typealias OnTransitionClosure = (_ newState: State, _ lastState: State) -> Void
 
-  let stateChart: StateChart
-  var currentState: State
-  var lastState: State
+  public let stateChart: StateChart
+  public var currentState: State
+  public var lastState: State
 
   private var onTransition: OnTransitionClosure?
   private var debugging = false
 
-  init(initial: State, stateChart: StateChart) {
+  public init(initial: State, stateChart: StateChart) {
     self.stateChart = stateChart
     currentState = initial
     lastState = initial
   }
 
-  mutating func send(_ action: Action) {
+  public mutating func send(_ action: Action) {
     let possibleActions = stateChart[currentState]
     let nextState = possibleActions?[action]
 
@@ -39,15 +39,15 @@ struct StateMachine<State: Hashable, Action: Hashable> {
     }
   }
 
-  mutating func onTransition(_ onTransitionClosure: @escaping OnTransitionClosure) {
+  public mutating func onTransition(_ onTransitionClosure: @escaping OnTransitionClosure) {
     onTransition = onTransitionClosure
   }
 
-  mutating func debug() {
+  public mutating func debug() {
     debugging = true
   }
 
-  func perhapsPrintDebugMessage(forAction: Action, failed: Bool = false) {
+  private func perhapsPrintDebugMessage(forAction: Action, failed: Bool = false) {
     if !debugging {
       return
     }
